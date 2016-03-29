@@ -111,6 +111,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="SQw-vY-J6h" secondAttribute="trailing" constant="20" id="wsO-r4-8vm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="SQw-vY-J6h" id="gPy-jm-Xn8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
