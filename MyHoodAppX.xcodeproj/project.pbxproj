@@ -14,6 +14,7 @@
 		B00A7C351CAA1C2400F7CB32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00A7C331CAA1C2400F7CB32 /* LaunchScreen.storyboard */; };
 		B00A7C3E1CAA1E2400F7CB32 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A7C3D1CAA1E2400F7CB32 /* Post.swift */; };
 		B00A7C411CAA299C00F7CB32 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A7C401CAA299C00F7CB32 /* PostCell.swift */; };
+		B00A7C441CAAFB0900F7CB32 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A7C431CAAFB0900F7CB32 /* AddPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B00A7C361CAA1C2500F7CB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00A7C3D1CAA1E2400F7CB32 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B00A7C401CAA299C00F7CB32 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		B00A7C431CAAFB0900F7CB32 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,10 @@
 		B00A7C291CAA1C2400F7CB32 /* MyHoodAppX */ = {
 			isa = PBXGroup;
 			children = (
+				B00A7C421CAAFAE000F7CB32 /* Controller */,
 				B00A7C3F1CAA297E00F7CB32 /* View */,
 				B00A7C3C1CAA1E1900F7CB32 /* Model */,
 				B00A7C2A1CAA1C2400F7CB32 /* AppDelegate.swift */,
-				B00A7C2C1CAA1C2400F7CB32 /* ViewController.swift */,
 				B00A7C311CAA1C2400F7CB32 /* Assets.xcassets */,
 				B00A7C331CAA1C2400F7CB32 /* LaunchScreen.storyboard */,
 				B00A7C361CAA1C2500F7CB32 /* Info.plist */,
@@ -84,6 +86,15 @@
 				B00A7C2E1CAA1C2400F7CB32 /* Main.storyboard */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		B00A7C421CAAFAE000F7CB32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B00A7C2C1CAA1C2400F7CB32 /* ViewController.swift */,
+				B00A7C431CAAFB0900F7CB32 /* AddPostViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00A7C3E1CAA1E2400F7CB32 /* Post.swift in Sources */,
+				B00A7C441CAAFB0900F7CB32 /* AddPostViewController.swift in Sources */,
 				B00A7C2D1CAA1C2400F7CB32 /* ViewController.swift in Sources */,
 				B00A7C2B1CAA1C2400F7CB32 /* AppDelegate.swift in Sources */,
 				B00A7C411CAA299C00F7CB32 /* PostCell.swift in Sources */,
