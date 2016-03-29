@@ -46,7 +46,9 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         if checkTextField() {
             let title = titleTextField.text!
             let desc = descriptionTextField.text!
-            var post = Post(imagePath: "", title: title, description: desc)
+            let post = Post(imagePath: "", title: title, description: desc)
+            DataService.instance.addPost(post)
+            dismissViewControllerAnimated(true, completion: nil)
         } else {
         
         }
