@@ -10,6 +10,10 @@ import UIKit
 
 class AddPostViewController: UIViewController {
 
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var postImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +25,16 @@ class AddPostViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func makePostButtonPressed(sender: AnyObject) {
+        
+    }
 
+    @IBAction func cancelButtonPressed(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func addPicButtonPressed(sender: AnyObject) {
+        
+    }
 
 }
