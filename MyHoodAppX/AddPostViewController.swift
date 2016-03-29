@@ -28,7 +28,6 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func checkTextField() -> Bool {
         if titleTextField.text!.isEmpty && descriptionTextField.text!.isEmpty {
-            showErrorMessage("Error", message: "All fields are required")
             return false
         } else {
             return true
@@ -50,7 +49,7 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
             DataService.instance.addPost(post)
             dismissViewControllerAnimated(true, completion: nil)
         } else {
-        
+            self.showErrorMessage("Error", message: "All fields are required")
         }
     }
 

@@ -47,4 +47,10 @@ class DataService {
         savePosts()
         loadPosts()
     }
+    
+    func documentsPathForFileName(name: String) -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let fullPath = paths[0] as NSString
+        return fullPath.stringByAppendingPathComponent(name)
+    }
 }
