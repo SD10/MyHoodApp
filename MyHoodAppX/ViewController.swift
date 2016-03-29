@@ -19,10 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
-        let post1 = Post(imagePath: "", title: "Post 1", description: "This is a post!")
-        let post2 = Post(imagePath: "", title: "Post 2", description: "This is another post!!!")
-        let post3 = Post(imagePath: "", title: "Post 3", description: "This is the final post")
-        posts.append(post1); posts.append(post2); posts.append(post3)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.onPostsLoaded), name: "postsLoaded", object: nil)
         
     }
 
@@ -35,12 +32,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return DataService.instance.loadedPosts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let post = posts[indexPath.row]
+        let post = DataService.instance.loadedPosts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             cell.configureCell(post)
@@ -56,5 +53,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 87.0
     }
     
+    func onPostsLoaded(notification: AnyObject) {
+        tableView.reloadData()
+    }
 }
 

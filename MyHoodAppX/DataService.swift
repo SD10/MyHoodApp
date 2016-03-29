@@ -31,6 +31,7 @@ class DataService {
                 _loadedPosts = postsArray
             }
         }
+        NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "postsLoaded", object: nil))
     }
     
     func saveImageAndCreatePath(image: UIImage) {
