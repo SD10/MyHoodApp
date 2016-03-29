@@ -11,19 +11,26 @@ import UIKit
 
 class DataService {
     static let instance = DataService()
-    
     private var _loadedPosts = [Post]()
     
     var loadedPosts: [Post] {
         return _loadedPosts
     }
     
+    let KEY_POSTS = "posts"
+    
     func savePosts() {
-        
+        // Taking array and turning it into data
+        let postsData = NSKeyedArchiver.archivedDataWithRootObject(_loadedPosts)
+        NSUserDefaults.standardUserDefaults().setObject(postsData, forKey: KEY_POSTS)
     }
     
     func loadPosts() {
-        
+        if let postsData = NSUserDefaults.standardUserDefaults().objectForKey(KEY_POSTS) as? NSData {
+            if let postsArray = NSKeyedUnarchiver.unarchiveObjectWithData(postsData) as? [Post] {
+                _loadedPosts = postsArray
+            }
+        }
     }
     
     func saveImageAndCreatePath(image: UIImage) {
