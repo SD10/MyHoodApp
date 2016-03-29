@@ -43,11 +43,14 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func makePostButtonPressed(sender: AnyObject) {
         if checkTextField() {
-            let title = titleTextField.text!
-            let desc = descriptionTextField.text!
-            let post = Post(imagePath: "", title: title, description: desc)
-            DataService.instance.addPost(post)
-            dismissViewControllerAnimated(true, completion: nil)
+            if let image = postImage.image {
+                let imagePath = DataService.instance.saveImageAndCreatePath(image)
+                let title = titleTextField.text!
+                let desc = descriptionTextField.text!
+                let post = Post(imagePath: imagePath, title: title, description: desc)
+                DataService.instance.addPost(post)
+                dismissViewControllerAnimated(true, completion: nil)
+            }
         } else {
             self.showErrorMessage("Error", message: "All fields are required")
         }

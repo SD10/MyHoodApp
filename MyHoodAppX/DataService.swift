@@ -23,6 +23,7 @@ class DataService {
         // Taking array and turning it into data
         let postsData = NSKeyedArchiver.archivedDataWithRootObject(_loadedPosts)
         NSUserDefaults.standardUserDefaults().setObject(postsData, forKey: KEY_POSTS)
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     func loadPosts() {
@@ -43,8 +44,10 @@ class DataService {
         return imagePath
     }
     
-    func imageForPath(path: String) {
-    
+    func imageForPath(path: String) -> UIImage? {
+        let fullPath = documentsPathForFileName(path)
+        let image = UIImage(named: fullPath)
+        return image
     }
     
     func addPost(post: Post) {
