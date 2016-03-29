@@ -8,16 +8,18 @@
 
 import UIKit
 
-class AddPostViewController: UIViewController {
+class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var postImage: RoundedImageView!
     
+    var imagePicker: UIImagePickerController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        postImage.layer.cornerRadius = postImage.frame.size.width/2
-        postImage.clipsToBounds = true
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +34,13 @@ class AddPostViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        postImage.image = image
+    }
+    
     @IBAction func addPicButtonPressed(sender: UIButton) {
+        presentViewController(imagePicker, animated: true, completion: nil)
         sender.setTitle("", forState: .Normal)
     }
 
