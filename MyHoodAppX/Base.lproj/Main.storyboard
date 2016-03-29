@@ -36,30 +36,30 @@
                                                         <constraint firstAttribute="width" constant="70" id="f1z-ac-nnQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Music man needs to go" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-UC-QQ1">
-                                                    <rect key="frame" x="86" y="8" width="426" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Hey this neighbor is such a punk! He blasts his Korn music way too loud and I'm thinking about burning his house down." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-YW-dGn">
+                                                    <rect key="frame" x="94" y="31" width="426" height="48"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey this neighbor is such a punk! He blasts his Korn music way too loud and I'm thinking about burning his house down." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-YW-dGn">
-                                                    <rect key="frame" x="86" y="31" width="426" height="48"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Music man needs to go" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-UC-QQ1">
+                                                    <rect key="frame" x="94" y="8" width="418" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="kdH-dY-xqo" firstAttribute="top" secondItem="ND5-0I-qNH" secondAttribute="top" constant="5" id="52c-71-kdO"/>
-                                                <constraint firstItem="ZNe-UC-QQ1" firstAttribute="top" secondItem="ND5-0I-qNH" secondAttribute="topMargin" id="Cnm-G1-WCR"/>
+                                                <constraint firstAttribute="bottom" secondItem="cLK-YW-dGn" secondAttribute="bottom" id="Ghx-d0-vHa"/>
                                                 <constraint firstItem="kdH-dY-xqo" firstAttribute="leading" secondItem="ND5-0I-qNH" secondAttribute="leading" constant="8" id="NpK-kM-q9d"/>
-                                                <constraint firstItem="cLK-YW-dGn" firstAttribute="top" secondItem="ZNe-UC-QQ1" secondAttribute="bottom" constant="3" id="Pim-N9-AIj"/>
-                                                <constraint firstAttribute="bottom" secondItem="cLK-YW-dGn" secondAttribute="bottom" id="baK-0t-VWI"/>
-                                                <constraint firstItem="cLK-YW-dGn" firstAttribute="leading" secondItem="kdH-dY-xqo" secondAttribute="trailing" constant="8" id="bgw-9N-fr1"/>
+                                                <constraint firstItem="ZNe-UC-QQ1" firstAttribute="top" secondItem="ND5-0I-qNH" secondAttribute="topMargin" id="XwG-ji-rDB"/>
+                                                <constraint firstItem="cLK-YW-dGn" firstAttribute="top" secondItem="ZNe-UC-QQ1" secondAttribute="bottom" constant="3" id="YxU-yf-Iaq"/>
+                                                <constraint firstAttribute="trailing" secondItem="cLK-YW-dGn" secondAttribute="trailing" id="ZZz-6R-BgY"/>
+                                                <constraint firstItem="ZNe-UC-QQ1" firstAttribute="trailing" secondItem="ND5-0I-qNH" secondAttribute="trailingMargin" id="bpY-yW-7Re"/>
                                                 <constraint firstAttribute="bottom" secondItem="kdH-dY-xqo" secondAttribute="bottom" constant="4" id="cCD-St-97N"/>
-                                                <constraint firstItem="ZNe-UC-QQ1" firstAttribute="leading" secondItem="kdH-dY-xqo" secondAttribute="trailing" constant="8" id="lm8-ff-TIf"/>
-                                                <constraint firstItem="cLK-YW-dGn" firstAttribute="trailing" secondItem="ND5-0I-qNH" secondAttribute="trailingMargin" id="uX6-p5-TE2"/>
-                                                <constraint firstItem="ZNe-UC-QQ1" firstAttribute="trailing" secondItem="ND5-0I-qNH" secondAttribute="trailingMargin" id="xy7-DX-zwA"/>
+                                                <constraint firstItem="ZNe-UC-QQ1" firstAttribute="leading" secondItem="kdH-dY-xqo" secondAttribute="trailing" constant="16" id="mXp-L0-99p"/>
+                                                <constraint firstItem="cLK-YW-dGn" firstAttribute="leading" secondItem="kdH-dY-xqo" secondAttribute="trailing" constant="16" id="xhJ-Lw-eIg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
