@@ -15,6 +15,7 @@
 		B00A7C3E1CAA1E2400F7CB32 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A7C3D1CAA1E2400F7CB32 /* Post.swift */; };
 		B00A7C411CAA299C00F7CB32 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A7C401CAA299C00F7CB32 /* PostCell.swift */; };
 		B00A7C441CAAFB0900F7CB32 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A7C431CAAFB0900F7CB32 /* AddPostViewController.swift */; };
+		B00A7C461CAB00F000F7CB32 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A7C451CAB00F000F7CB32 /* RoundedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B00A7C3D1CAA1E2400F7CB32 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B00A7C401CAA299C00F7CB32 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B00A7C431CAAFB0900F7CB32 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		B00A7C451CAB00F000F7CB32 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,9 @@
 		B00A7C3F1CAA297E00F7CB32 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B00A7C401CAA299C00F7CB32 /* PostCell.swift */,
 				B00A7C2E1CAA1C2400F7CB32 /* Main.storyboard */,
+				B00A7C401CAA299C00F7CB32 /* PostCell.swift */,
+				B00A7C451CAB00F000F7CB32 /* RoundedImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			files = (
 				B00A7C3E1CAA1E2400F7CB32 /* Post.swift in Sources */,
 				B00A7C441CAAFB0900F7CB32 /* AddPostViewController.swift in Sources */,
+				B00A7C461CAB00F000F7CB32 /* RoundedImageView.swift in Sources */,
 				B00A7C2D1CAA1C2400F7CB32 /* ViewController.swift in Sources */,
 				B00A7C2B1CAA1C2400F7CB32 /* AppDelegate.swift in Sources */,
 				B00A7C411CAA299C00F7CB32 /* PostCell.swift in Sources */,

@@ -12,17 +12,16 @@ class AddPostViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postImage: RoundedImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        postImage.layer.cornerRadius = postImage.frame.size.width/2
+        postImage.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func makePostButtonPressed(sender: AnyObject) {
@@ -30,11 +29,11 @@ class AddPostViewController: UIViewController {
     }
 
     @IBAction func cancelButtonPressed(sender: AnyObject) {
-        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func addPicButtonPressed(sender: AnyObject) {
-        
+    @IBAction func addPicButtonPressed(sender: UIButton) {
+        sender.setTitle("", forState: .Normal)
     }
 
 }

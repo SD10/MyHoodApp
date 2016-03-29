@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="520" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="kdH-dY-xqo">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="kdH-dY-xqo" customClass="RoundedImageView" customModule="MyHoodAppX" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="5" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="2mb-i1-r4R"/>
@@ -170,7 +170,7 @@
                                     <constraint firstItem="eDw-Kj-CkL" firstAttribute="centerX" secondItem="kzn-Wi-LqN" secondAttribute="centerX" id="sHZ-YJ-Zx2"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="hMf-1n-nxO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hMf-1n-nxO" customClass="RoundedImageView" customModule="MyHoodAppX" customModuleProvider="target">
                                 <rect key="frame" x="180" y="105" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="SC1-wH-SVe"/>
