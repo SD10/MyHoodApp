@@ -34,8 +34,13 @@ class DataService {
         NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "postsLoaded", object: nil))
     }
     
-    func saveImageAndCreatePath(image: UIImage) {
-        
+    func saveImageAndCreatePath(image: UIImage) -> String {
+        let imageData = UIImagePNGRepresentation(image)
+        // Time is always changing, so image will always have a unique name
+        let imagePath = "image\(NSDate.timeIntervalSinceReferenceDate())"
+        let fullPath = documentsPathForFileName(imagePath)
+        imageData?.writeToFile(fullPath, atomically: true)
+        return imagePath
     }
     
     func imageForPath(path: String) {
