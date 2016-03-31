@@ -56,6 +56,10 @@ class DataService {
         loadPosts()
     }
     
+    func deletePost(index: Int) {
+        _loadedPosts.removeAtIndex(index)
+    }
+    
     func documentsPathForFileName(name: String) -> String {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let fullPath = paths[0] as NSString
