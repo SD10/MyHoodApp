@@ -44,10 +44,15 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func makePostButtonPressed(sender: AnyObject) {
         if checkTextField() {
             if let image = postImage.image {
+                let date = NSDate()
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "dd-MM-yyyy"
+                let today = formatter.stringFromDate(date)
                 let imagePath = DataService.instance.saveImageAndCreatePath(image)
                 let title = titleTextField.text!
                 let desc = descriptionTextField.text!
-                let post = Post(imagePath: imagePath, title: title, description: desc)
+                print("The date is: \(today)")
+                let post = Post(imagePath: imagePath, title: title, description: desc, time: today)
                 DataService.instance.addPost(post)
                 dismissViewControllerAnimated(true, completion: nil)
             }
